@@ -9,7 +9,11 @@ const Page = async () => {
   });
 
   if (!!session) {
+<<<<<<< HEAD
     redirect("/");
+=======
+    redirect("/sign-in");
+>>>>>>> caf0ec3 (added socail auth)
   }
 
   return <SignUpView />;
