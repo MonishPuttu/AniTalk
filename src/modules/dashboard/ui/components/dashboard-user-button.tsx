@@ -42,6 +42,8 @@ export const DashboardUserButton = () => {
     return null;
   }
 
+  const avatarSeed = data.user.name || data.user.email || "User";
+
   if (isMobile) {
     return (
       <Drawer>
@@ -98,7 +100,7 @@ export const DashboardUserButton = () => {
           </Avatar>
         ) : (
           <GeneratedAvatar
-            seed={data.user.name}
+            seed={avatarSeed}
             variant="initials"
             className="size-9 mr-3"
           />
@@ -128,7 +130,7 @@ export const DashboardUserButton = () => {
           onClick={onLogout}
         >
           Logout
-          <CreditCardIcon className="size-4" />
+          <LogOutIcon className="size-4" />
         </DropdownMenuItem>
       </DropdownMenuContent>
     </DropdownMenu>
