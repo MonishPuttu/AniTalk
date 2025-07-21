@@ -23,7 +23,7 @@ import {
 import Link from "next/link";
 
 const formSchema = z.object({
-  email: z.email(),
+  email: z.string().email(),
   password: z.string().min(1, { message: "Password is required" }),
 });
 
