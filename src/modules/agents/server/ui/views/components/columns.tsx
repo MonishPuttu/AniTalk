@@ -38,7 +38,7 @@ export const columns: ColumnDef<AgentGetOne>[] = [
     cell: ({ row }) => (
       <Badge>
         <VideoIcon className="text-purple-700" />
-        {row.original.meetingCount}{" "}
+        {row.original.meetingCount}
         {row.original.meetingCount === 1 ? "meeting" : "meetings"}
       </Badge>
     ),
