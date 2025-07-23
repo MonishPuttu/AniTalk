@@ -21,7 +21,7 @@ import { meetingsInsertSchema } from "../schema";
 import { useState } from "react";
 import { CommandSelect } from "@/components/command-select";
 import { GeneratedAvatar } from "@/components/generated-avatar";
-import { NewAgentDialog } from "@/modules/agents/server/ui/views/components/new-agent-dialog";
+import { NewAgentDialog } from "@/modules/agents/components/new-agent-dialog";
 
 interface MeetingFormProps {
   onSuccess?: (id?: string) => void;

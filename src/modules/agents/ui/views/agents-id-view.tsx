@@ -8,7 +8,7 @@ import {
   useQueryClient,
   useSuspenseQuery,
 } from "@tanstack/react-query";
-import { AgentIdViewHeader } from "./components/agent-id-view-header";
+import { AgentIdViewHeader } from "../../components/agent-id-view-header";
 import { GeneratedAvatar } from "@/components/generated-avatar";
 import { Badge } from "@/components/ui/badge";
 import { VideoIcon } from "lucide-react";
@@ -16,7 +16,7 @@ import { useRouter } from "next/navigation";
 import { toast } from "sonner";
 import { useConfirm } from "@/hooks/use-confirm";
 import { useState } from "react";
-import { UpdateAgentDialog } from "./components/update-agent-dialog";
+import { UpdateAgentDialog } from "../../components/update-agent-dialog";
 
 interface Props {
   agentId: string;
