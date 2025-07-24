@@ -65,7 +65,7 @@ export const DashboardSidebar = () => {
                     className={cn(
                       "h-10 hover:bg-linear-to-r/oklch border border-transparent hover:border-[#4F1C51]/10 from-sidebar-accent from-5% via-30% via-sidebar/50 to-sidebar/50",
                       pathname === item.href &&
-                        "bg-liner-to-r/oklch border-[#4F1C51]/10"
+                        "bg-linear-to-r/oklch border-[#4F1C51]/10"
                     )}
                     isActive={pathname === item.href}
                   >
@@ -94,7 +94,7 @@ export const DashboardSidebar = () => {
                     className={cn(
                       "h-10 hover:bg-linear-to-r/oklch border border-transparent hover:border-[#4F1C51]/10 from-sidebar-accent from-5% via-30% via-sidebar/50 to-sidebar/50",
                       pathname === item.href &&
-                        "bg-liner-to-r/oklch border-[#4F1C51]/10"
+                        "bg-linear-to-r/oklch border-[#4F1C51]/10"
                     )}
                     isActive={pathname === item.href}
                   >
