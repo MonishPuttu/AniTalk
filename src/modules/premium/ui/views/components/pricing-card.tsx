@@ -8,8 +8,9 @@ import { CircleCheckIcon } from "lucide-react";
 const pricingCardVariants = cva("rounded-lg p-4 py-6 w-full", {
   variants: {
     variant: {
-      default: "bg-white text-black",
-      highlighted: "bg-gradient-to-br from-purple-600 to-indigo-700 text-white",
+      default: "bg-card text-card-foreground border-border",
+      highlighted:
+        "bg-gradient-to-br from-primary to-sidebar text-primary-foreground border-primary/20",
     },
   },
   defaultVariants: {
@@ -20,8 +21,8 @@ const pricingCardVariants = cva("rounded-lg p-4 py-6 w-full", {
 const pricingCardIconVariants = cva("size-5", {
   variants: {
     variant: {
-      default: "fill-primary text-white",
-      highlighted: "fill-white text-purple-600",
+      default: "fill-primary text-card",
+      highlighted: "fill-primary-foreground text-primary",
     },
   },
   defaultVariants: {
@@ -29,11 +30,11 @@ const pricingCardIconVariants = cva("size-5", {
   },
 });
 
-const pricingCardSecondaryTextVariants = cva("text-neutral-700", {
+const pricingCardSecondaryTextVariants = cva(" ", {
   variants: {
     variant: {
-      default: "text-neutral-700",
-      highlighted: "text-purple-100",
+      default: "text-muted-foreground",
+      highlighted: "text-primary-foreground/80",
     },
   },
 });
@@ -41,8 +42,8 @@ const pricingCardSecondaryTextVariants = cva("text-neutral-700", {
 const pricingCardBadgeVariants = cva("text-black text-xs font-normal p-1", {
   variants: {
     variant: {
-      default: "bg-primary/20",
-      highlighted: "bg-white/20 text-white",
+      default: "bg-primary/20 text-primary",
+      highlighted: "bg-primary-foreground/20 text-primary-foreground",
     },
   },
   defaultVariants: {
@@ -75,7 +76,7 @@ export const PricingCard = ({
   onClick,
 }: Props) => {
   return (
-    <div className={cn(pricingCardVariants({ variant }), className, "border")}>
+    <div className={cn(pricingCardVariants({ variant }), className)}>
       <div className="flex items-end gap-x-4 justify-between">
         <div className="flex flex-col gap-y-2">
           <div className="flex items-center gap-x-2">
@@ -109,7 +110,12 @@ export const PricingCard = ({
         </div>
       </div>
       <div className="py-6">
-        <Separator className="opacity-10 text-[#5D6B68]" />
+        <Separator
+          className={cn(
+            "opacity-20",
+            variant === "highlighted" ? "bg-primary-foreground" : "bg-border"
+          )}
+        />
       </div>
       <Button
         className="w-full"

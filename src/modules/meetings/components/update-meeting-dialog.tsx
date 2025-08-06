@@ -1,6 +1,5 @@
 import { ResponsiveDialog } from "@/components/responsive-dialog";
 import { MeetingForm } from "./meeting-form";
-import { useRouter } from "next/navigation";
 import { MeetingsGetOne } from "../types";
 
 interface NewMeetingDialogProps {
@@ -14,8 +13,6 @@ export const UpdateMeetingDialog = ({
   onOpenChange,
   initialValues,
 }: NewMeetingDialogProps) => {
-  const router = useRouter();
-
   return (
     <ResponsiveDialog
       title="Edit Meeting"

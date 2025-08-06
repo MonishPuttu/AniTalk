@@ -1,4 +1,4 @@
-import { OpenAI } from "./../../../../node_modules/openai/src/client";
+import OpenAI from "openai";
 import { db } from "@/db";
 import { agents, meetings } from "@/db/schema";
 import { inngest } from "@/inngest/client";

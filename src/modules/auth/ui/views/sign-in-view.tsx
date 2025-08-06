@@ -21,6 +21,7 @@ import {
   FormMessage,
 } from "@/components/ui/form";
 import Link from "next/link";
+import Image from "next/image";
 
 const formSchema = z.object({
   email: z.string().email(),
@@ -188,7 +189,7 @@ export const SignInView = () => {
             className="bg-radial from-sidebar-accent to-sidebar
           relative hidden md:flex flex-col gap-y-4 items-center justify-center"
           >
-            <img src="/logo.svg" alt="Image" className="h-[92px] w-[92px]" />
+            <Image src="/logo.svg" alt="Image" className="h-[92px] w-[92px]" />
             <p className="text-2xl font-semibold text-white"></p>
           </div>
         </CardContent>

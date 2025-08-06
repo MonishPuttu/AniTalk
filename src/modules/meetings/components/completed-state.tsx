@@ -1,13 +1,7 @@
 import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { MeetingsGetOne } from "../types";
 import { ScrollArea, ScrollBar } from "@/components/ui/scroll-area";
-import {
-  SparklesIcon,
-  FileTextIcon,
-  BookOpenTextIcon,
-  FileVideoIcon,
-  ClockFadingIcon,
-} from "lucide-react";
+import { SparklesIcon, BookOpenTextIcon, ClockFadingIcon } from "lucide-react";
 import { TabsContent } from "@radix-ui/react-tabs";
 import Markdown from "react-markdown";
 import Link from "next/link";

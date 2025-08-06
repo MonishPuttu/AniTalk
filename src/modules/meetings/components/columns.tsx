@@ -3,7 +3,7 @@
 import { GeneratedAvatar } from "@/components/generated-avatar";
 import { Badge } from "@/components/ui/badge";
 import { ColumnDef } from "@tanstack/react-table";
-import { CornerDownRightIcon, VideoIcon } from "lucide-react";
+import { CornerDownRightIcon } from "lucide-react";
 import { MeetingsGetMany } from "../types";
 import {
   CircleCheckIcon,
@@ -14,7 +14,6 @@ import {
 } from "lucide-react";
 import { format } from "date-fns";
 import { cn, formatDuration } from "@/lib/utils";
-import humanizeDuration from "humanize-duration";
 
 const statusIconMap = {
   upcoming: ClockArrowUpIcon,
