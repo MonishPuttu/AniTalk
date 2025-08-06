@@ -9,7 +9,7 @@ const pricingCardVariants = cva("rounded-lg p-4 py-6 w-full", {
   variants: {
     variant: {
       default: "bg-white text-black",
-      highlighted: "bg-linear-to-br from-[] to-[] text-white",
+      highlighted: "bg-gradient-to-br from-purple-600 to-indigo-700 text-white",
     },
   },
   defaultVariants: {
@@ -21,7 +21,7 @@ const pricingCardIconVariants = cva("size-5", {
   variants: {
     variant: {
       default: "fill-primary text-white",
-      highlighted: "fill-white text-black",
+      highlighted: "fill-white text-purple-600",
     },
   },
   defaultVariants: {
@@ -33,7 +33,7 @@ const pricingCardSecondaryTextVariants = cva("text-neutral-700", {
   variants: {
     variant: {
       default: "text-neutral-700",
-      highlighted: "text-neutral-300",
+      highlighted: "text-purple-100",
     },
   },
 });
@@ -42,7 +42,7 @@ const pricingCardBadgeVariants = cva("text-black text-xs font-normal p-1", {
   variants: {
     variant: {
       default: "bg-primary/20",
-      highlighted: "bg-[]",
+      highlighted: "bg-white/20 text-white",
     },
   },
   defaultVariants: {
@@ -97,7 +97,7 @@ export const PricingCard = ({
         </div>
         <div className="flex items-end shrink-0 gap-x-0.5">
           <h4 className="text-3xl font-medium">
-            {Intl.NumberFormat("en-IND", {
+            {Intl.NumberFormat("en-IN", {
               style: "currency",
               currency: "INR",
               minimumFractionDigits: 0,
@@ -120,7 +120,7 @@ export const PricingCard = ({
         {buttonText}
       </Button>
       <div className="flex flex-col gap-y-2 mt-6">
-        <p className="font-medium uppercase">Features</p>?
+        <p className="font-medium uppercase">Features</p>
         <ul
           className={cn(
             "flex flex-col gap-y-2.5",
