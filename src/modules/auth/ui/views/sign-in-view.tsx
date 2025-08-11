@@ -189,7 +189,7 @@ export const SignInView = () => {
             className="bg-radial from-sidebar-accent to-sidebar
           relative hidden md:flex flex-col gap-y-4 items-center justify-center"
           >
-            <Image src="/logo.svg" alt="Image" className="h-[92px] w-[92px]" />
+            <Image src="/logo.svg" alt="Image" width={92} height={92} />
             <p className="text-2xl font-semibold text-white"></p>
           </div>
         </CardContent>
