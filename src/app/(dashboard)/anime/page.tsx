@@ -1,14 +1,33 @@
-import { Conversation } from "@/modules/anime/components/conversation";
+import { auth } from "@/lib/auth";
+import { AnimeSelect } from "@/modules/anime/components/anime-select";
 
-export default function Home() {
+import { Conversation } from "@/modules/anime/components/conversation";
+import {
+  AnimeViewError,
+  AnimeViewLoading,
+} from "@/modules/anime/ui/views/anime-view";
+import { headers } from "next/headers";
+import { redirect } from "next/navigation";
+import { Suspense } from "react";
+import { ErrorBoundary } from "react-error-boundary";
+
+const Page = async () => {
+  const session = await auth.api.getSession({
+    headers: await headers(),
+  });
+
+  if (!session) {
+    redirect("/sign-in");
+  }
+
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm">
-        <h1 className="text-4xl font-bold mb-8 text-center">
-          ElevenLabs Conversational AI
-        </h1>
-        <Conversation />
-      </div>
-    </main>
+    <Suspense fallback={<AnimeViewLoading />}>
+      <ErrorBoundary fallback={<AnimeViewError />}>
+        {/* <Conversation /> */}
+        <AnimeSelect />
+      </ErrorBoundary>
+    </Suspense>
   );
-}
+};
+
+export default Page;
