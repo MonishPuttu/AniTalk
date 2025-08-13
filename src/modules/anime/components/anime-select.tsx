@@ -1,34 +1,29 @@
+"use client";
+
+import { Card } from "./card";
+import { AnimeCards } from "../constants";
+import { useRouter } from "next/navigation";
+
 export const AnimeSelect = () => {
+  const router = useRouter();
+  const handleOnClick = () => {
+    router.push("/anime");
+  };
+
   return (
-    <div className="h-screen p-8">
-      <div className="grid grid-cols-2 gap-6 w-full h-full">
-        <div
-          className="bg-accent-foreground flex items-center justify-center hover:bg-white
-         text-white hover:text-black border shadow-md rounded-xl hover:scale-105
-         transition-all duration-300"
-        >
-          <span>Box 1</span>
-        </div>
-        <div
-          className="bg-accent-foreground flex items-center justify-center hover:bg-white
-         text-white hover:text-black border shadow-md rounded-xl hover:scale-105
-         transition-all duration-200"
-        >
-          <span>Box 2</span>
-        </div>
-        <div
-          className="bg-accent-foreground flex items-center justify-center hover:bg-white
-         text-white hover:text-black border shadow-md rounded-xl hover:scale-105
-         transition-all duration-200"
-        >
-          <span>Box 3</span>
-        </div>
-        <div
-          className="bg-accent-foreground flex items-center justify-center hover:bg-white
-         text-white hover:text-black border shadow-md rounded-xl hover:scale-105
-         transition-all duration-200"
-        >
-          <span>Box 4</span>
+    <div className="h-screen w-screen overflow-hidden">
+      <div className="h-full w-full p-4 md:p-6 lg:p-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6 h-full">
+          {AnimeCards.map((anime) => (
+            <Card
+              key={anime.id}
+              image={anime.image}
+              text={anime.text}
+              title={anime.title}
+              onClick={handleOnClick}
+              className="h-full min-h-0"
+            />
+          ))}
         </div>
       </div>
     </div>
