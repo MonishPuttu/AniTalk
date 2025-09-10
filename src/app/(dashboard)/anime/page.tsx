@@ -23,8 +23,8 @@ const Page = async () => {
   return (
     <Suspense fallback={<AnimeViewLoading />}>
       <ErrorBoundary fallback={<AnimeViewError />}>
-        {/* <Conversation /> */}
-        <AnimeSelect />
+        <Conversation />
+        {/* <AnimeSelect /> */}
       </ErrorBoundary>
     </Suspense>
   );

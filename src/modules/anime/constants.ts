@@ -2,23 +2,54 @@ import gojo from "../../../public/gojo.svg";
 import madara from "../../../public/madarauchiha.svg";
 import zerotwo from "../../../public/zerotwo.svg";
 
-export const AnimeCards = [
+interface ImageConfig {
+  width?: number;
+  height?: number;
+  objectFit?: "contain" | "cover" | "fill" | "none" | "scale-down";
+  imageClass?: string;
+}
+
+export interface AnimeCardData {
+  id: number;
+  image: string;
+  title: string;
+  text: string;
+  imageConfig?: ImageConfig;
+}
+
+export const AnimeCards: AnimeCardData[] = [
   {
     id: 1,
     image: gojo,
     title: "Satoru Gojo",
     text: "The strongest sorcerer with limitless power and endless charm. Experience his playful confidence and unmatched wit in every conversation",
+    imageConfig: {
+      width: 300,
+      height: 300,
+      objectFit: "cover",
+      imageClass: "absolute bottom-0 left-12 top-18 scale-150",
+    },
   },
   {
     id: 2,
     image: madara,
     title: "Madara Uchiha",
     text: "The legendary Ghost of the Uchiha - fierce, strategic, and unforgettable. Engage with one of anime's most iconic and powerful shinobi.",
+    imageConfig: {
+      width: 300,
+      height: 300,
+      imageClass: "scale-200 top-24 left-2",
+    },
   },
   {
     id: 3,
     image: zerotwo,
     title: "Zero Two",
     text: "The mysterious darling with horns and attitude. Chat with the flirty, unpredictable pilot who's as dangerous as she is captivating.",
+    imageConfig: {
+      width: 300,
+      height: 300,
+      imageClass: "scale-135 ml-14 bottom-2",
+    },
   },
 ];
