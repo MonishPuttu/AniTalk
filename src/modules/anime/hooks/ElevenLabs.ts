@@ -31,4 +31,81 @@ export function ElevenLabsConversation({
       console.log("Conversation Error:", error);
     },
   });
+
+  useEffect(() => {
+    if (onSpeakingChange) {
+      onSpeakingChange(conversation.isSpeaking);
+    }
+  }, [conversation.isSpeaking, onSpeakingChange]);
+
+  const initalizeAudio = useCallback(async () => {
+    try {
+      console.log("Requesting microphone permission...");
+      await navigator.mediaDevices.getUserMedia({
+        audio: {
+          echoCancellation: true,
+          noiseSuppression: true,
+          autoGainControl: true,
+        },
+      });
+
+      setAudioPermission(true);
+      console.log("Microphone permission granted");
+
+      const audioContext = new (window.AudioContext || window.AudioContext)();
+      if (audioContext.state === "suspended") {
+        await audioContext.resume();
+        console.log("Audio context resumed");
+      }
+
+      setIsInitialized(true);
+      return true;
+    } catch (error) {
+      console.error("Failed to initialize audio:", error);
+      setAudioPermission(false);
+      return false;
+    }
+  }, []);
+
+  const startConversation = useCallback(async () => {
+    try {
+      if (!isInitialized) {
+        const success = await initalizeAudio();
+        if (!success) return false;
+      }
+
+      console.log("Starting ElevenLabs session...");
+      await conversation.startSession({
+        agentId,
+        connectionType: "websocket",
+      });
+
+      console.log("Session started successfully");
+      return true;
+    } catch (error) {
+      console.error("Failed to start conversation", error);
+      return false;
+    }
+  }, [conversation, agentId, isInitialized, initalizeAudio]);
+
+  const stopConversation = useCallback(async () => {
+    console.log("stopping conversation...");
+    await conversation.endSession();
+  }, [conversation]);
+
+  useEffect(() => {
+    if (autoConnect && agentId) {
+      startConversation();
+    }
+  }, [autoConnect, agentId, startConversation]);
+
+  return {
+    status: conversation.status,
+    isSpeaking: conversation.isSpeaking,
+    audioPermission,
+    isInitialized,
+    startConversation,
+    stopConversation,
+    initalizeAudio,
+  };
 }
