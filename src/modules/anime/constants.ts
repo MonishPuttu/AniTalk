@@ -40,7 +40,7 @@ export const AnimeCards: AnimeCardData[] = [
     image: madara,
     title: "Madara Uchiha",
     text: "The legendary Ghost of the Uchiha - fierce, strategic, and unforgettable. Engage with one of anime's most iconic and powerful shinobi.",
-    agentId: "agent_5701k2d0nwk2fht98vpea0q2cymz",
+    agentId: "agent_5901kh1sv8y0fjdvsc22rwy9qs0c",
     bgColor: "#2a1215",
     imageConfig: {
       width: 300,
@@ -53,7 +53,7 @@ export const AnimeCards: AnimeCardData[] = [
     image: zerotwo,
     title: "Zero Two",
     text: "The mysterious darling with horns and attitude. Chat with the flirty, unpredictable pilot who's as dangerous as she is captivating.",
-    agentId: "agent_5701k2d0nwk2fht98vpea0q2cymz",
+    agentId: "agent_9901kh1trmtvf4rrfykwbcq4wd2h",
     bgColor: "#1f1520",
     imageConfig: {
       width: 300,
