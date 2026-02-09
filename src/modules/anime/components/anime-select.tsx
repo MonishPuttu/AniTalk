@@ -6,9 +6,6 @@ import { useRouter } from "next/navigation";
 
 export const AnimeSelect = () => {
   const router = useRouter();
-  const handleOnClick = () => {
-    router.push("/anime");
-  };
 
   return (
     <div className="h-full w-full overflow-hidden p-4 md:p-6 lg:p-8">
@@ -20,7 +17,7 @@ export const AnimeSelect = () => {
             text={item.text}
             title={item.title}
             imageConfig={item.imageConfig}
-            onClick={handleOnClick}
+            onClick={() => router.push(`/anime/${item.id}`)}
             className="w-full h-full"
           />
         ))}

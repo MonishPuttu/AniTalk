@@ -1,7 +1,5 @@
 import { auth } from "@/lib/auth";
 import { AnimeSelect } from "@/modules/anime/components/anime-select";
-
-import { Conversation } from "@/modules/anime/components/conversation";
 import {
   AnimeViewError,
   AnimeViewLoading,
@@ -23,8 +21,7 @@ const Page = async () => {
   return (
     <Suspense fallback={<AnimeViewLoading />}>
       <ErrorBoundary fallback={<AnimeViewError />}>
-        <Conversation />
-        {/* <AnimeSelect /> */}
+        <AnimeSelect />
       </ErrorBoundary>
     </Suspense>
   );
