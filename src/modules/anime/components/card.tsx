@@ -2,6 +2,14 @@ import { ChevronRight } from "lucide-react";
 import Image from "next/image";
 import { StaticImageData } from "next/image";
 
+const OBJECT_FIT_CLASS: Record<string, string> = {
+  contain: "object-contain",
+  cover: "object-cover",
+  fill: "object-fill",
+  none: "object-none",
+  "scale-down": "object-scale-down",
+};
+
 interface ImageConfig {
   width?: number;
   height?: number;
@@ -63,8 +71,7 @@ export const Card = ({
           alt={title}
           width={finalConfig.width}
           height={finalConfig.height}
-          className={`object-${finalConfig.objectFit} ${finalConfig.ImgClass}
-            drop-shadow-[0_0_15px_rgba(255,255,255,0.15)]`}
+          className={`${finalConfig.ImgClass} ${OBJECT_FIT_CLASS[finalConfig.objectFit ?? 'cover']} drop-shadow-[0_0_15px_rgba(255,255,255,0.15)]`}
           style={{ position: "absolute", filter: "drop-shadow(0 4px 20px rgba(0,0,0,0.4))" }}
         />
       </div>
