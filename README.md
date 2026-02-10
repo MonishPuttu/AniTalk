@@ -5,13 +5,6 @@ It also features a unique mode where users can talk to their **favourite anime c
 
 ---
 
-## 🎥 Demo
-
-![AniTalk Demo](./assets/demo.gif)
-<!-- TODO: Add a demo GIF showing voice interaction -->
-
----
-
 ## 🚀 Features
 
 ### 🎙️ Core Capabilities
@@ -35,17 +28,19 @@ It also features a unique mode where users can talk to their **favourite anime c
 
 ## 🖼️ Screenshots
 
-### Home Screen
-![Home Screen](./assets/home.png)
-<!-- TODO: Add home screen screenshot -->
-
-### Voice Chat Interface
-![Voice Chat Interface](./assets/voice-chat.png)
-<!-- TODO: Add voice chat UI screenshot -->
-
 ### Anime Character Selection
 ![Anime Character Mode](./assets/anime-mode.png)
-<!-- TODO: Add anime character selection screenshot -->
+
+### Voice Chat Interface
+![Voice Chat Interface](./assets/anime-voice-interaction.png)
+
+### Custom AI Chat Window
+![AI Tutor Screen](./assets/custom-tutors.png)
+
+### Payment Integration
+![Payments Page](./assets/payment-options.png)
+
+![Checkout Page](./assets/polar-payment.png)
 
 ---
 
