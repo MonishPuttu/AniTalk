@@ -60,7 +60,7 @@ export const SignInView = () => {
           setPending(false);
           setError(error.message);
         },
-      }
+      },
     );
   };
 
@@ -81,7 +81,7 @@ export const SignInView = () => {
           setPending(false);
           setError(error.message);
         },
-      }
+      },
     );
   };
 
