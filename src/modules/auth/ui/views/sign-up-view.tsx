@@ -97,15 +97,21 @@ export const SignUpView = () => {
 
   return (
     <div className="flex flex-col gap-6">
-      <Card className="overflow-hidden p-0">
-        <CardContent className="grid p-0 md:grid-cols-2">
+      <Card className="overflow-hidden border border-border/60 bg-card/95 p-0 shadow-2xl shadow-primary/10 backdrop-blur-sm">
+        <CardContent className="grid p-0 md:grid-cols-[1fr_0.9fr]">
           <Form {...form}>
-            <form onSubmit={form.handleSubmit(onSubmit)} className="p-6 md:p-8">
+            <form
+              onSubmit={form.handleSubmit(onSubmit)}
+              className="p-6 md:border-r md:border-border/60 md:p-8"
+            >
               <div className="flex flex-col gap-6">
                 <div className="flex flex-col items-center text-center">
+                  <span className="mb-2 inline-flex rounded-full border border-border/70 bg-muted px-3 py-1 text-xs font-medium text-muted-foreground">
+                    New account
+                  </span>
                   <h1 className="text-2xl font-bold">Let&apos;s get started</h1>
                   <p className="text-muted-foreground text-balance">
-                    Create your account
+                    Create your account and start talking anime instantly
                   </p>
                 </div>
                 <div className="grid gap-3">
@@ -119,6 +125,7 @@ export const SignUpView = () => {
                           <Input
                             type="name"
                             placeholder="John Doe"
+                            className="h-11"
                             {...field}
                           />
                         </FormControl>
@@ -138,6 +145,7 @@ export const SignUpView = () => {
                           <Input
                             type="email"
                             placeholder="m@example.com"
+                            className="h-11"
                             {...field}
                           />
                         </FormControl>
@@ -157,6 +165,7 @@ export const SignUpView = () => {
                           <Input
                             type="password"
                             placeholder="******"
+                            className="h-11"
                             {...field}
                           />
                         </FormControl>
@@ -176,6 +185,7 @@ export const SignUpView = () => {
                           <Input
                             type="password"
                             placeholder="******"
+                            className="h-11"
                             {...field}
                           />
                         </FormControl>
@@ -190,14 +200,18 @@ export const SignUpView = () => {
                     <AlertTitle>{error}</AlertTitle>
                   </Alert>
                 )}
-                <Button disabled={pending} type="submit" className="w-full">
+                <Button
+                  disabled={pending}
+                  type="submit"
+                  className="h-11 w-full"
+                >
                   Sign up
                 </Button>
                 <div
                   className="after:border-border relative text-center text-sm after:absolute
                 after:inset-0 after:top-1/2 after:z-0 after:flex after:items-center after:border-t"
                 >
-                  <span className="bg-card text-muted-foreground relative z-10 px-2">
+                  <span className="bg-background text-muted-foreground relative z-10 px-2">
                     Or continue with
                   </span>
                 </div>
@@ -207,18 +221,18 @@ export const SignUpView = () => {
                     onClick={() => onSocial("google")}
                     variant="outline"
                     type="button"
-                    className="w-full"
+                    className="h-11 w-full"
                   >
-                    <FaGoogle />
+                    <FaGoogle /> Google
                   </Button>
                   <Button
                     disabled={pending}
                     onClick={() => onSocial("github")}
                     variant="outline"
                     type="button"
-                    className="w-full"
+                    className="h-11 w-full"
                   >
-                    <FaGithub />
+                    <FaGithub /> GitHub
                   </Button>
                 </div>
                 <div className="text-center text-sm">
@@ -233,12 +247,29 @@ export const SignUpView = () => {
               </div>
             </form>
           </Form>
-          <div
-            className="bg-radial from-sidebar-accent to-sidebar
-          relative hidden md:flex flex-col gap-y-4 items-center justify-center"
-          >
-            <Image src="/logo.svg" alt="Image" width={92} height={92} />
-            <p className="text-2xl font-semibold text-white"></p>
+          <div className="relative isolate hidden overflow-hidden md:flex md:flex-col md:items-center md:justify-center md:gap-y-4 md:bg-gradient-to-br md:from-sidebar md:via-sidebar-accent md:to-primary md:p-10">
+            <div className="absolute -left-14 -top-14 h-48 w-48 rounded-full bg-sidebar-accent/35 blur-3xl" />
+            <div className="absolute -bottom-16 -right-16 h-56 w-56 rounded-full bg-primary/30 blur-3xl" />
+            <div className="relative z-10 flex max-w-xs flex-col items-center text-center text-sidebar-foreground">
+              <Image
+                src="/logo-auth.svg"
+                alt="AniTalk logo"
+                width={96}
+                height={96}
+                className="mb-5"
+              />
+              <h2 className="text-2xl font-semibold leading-tight">
+                Build your anime companion
+              </h2>
+              <p className="mt-2 text-sm text-sidebar-foreground/90">
+                Create your profile and unlock live voice sessions with smart
+                anime agents.
+              </p>
+              <div className="mt-5 rounded-xl border border-sidebar-foreground/25 bg-sidebar-foreground/10 px-4 py-3 text-sm text-sidebar-foreground/90 backdrop-blur-sm">
+                Personalized characters, easy scheduling, and premium call
+                quality.
+              </div>
+            </div>
           </div>
         </CardContent>
       </Card>
