@@ -9,7 +9,7 @@
 **Share caption:** "Madara Uchiha is calling. You can pick up."
 
 ## Visual identity (from the code)
-- Font: Geist (next/font/google in `src/app/layout.tsx`)
+- Font: Inter (next/font/google in `src/app/layout.tsx`)
 - Sidebar purple `oklch(0.2195 0.0751 301)` ≈ `#2a1140`, primary plum `#4f1c51` (logo + buttons), card backgrounds `#1a1a2e` / `#2a1215` / `#1f1520` from `src/modules/anime/constants.ts`
 - Real assets: `public/gojo.svg`, `public/madarauchiha.svg`, `public/zerotwo.svg`, `public/logo.svg`
 - Chat UI rebuilt from `src/modules/anime/components/anime-conversation.tsx` (blue-600 user bubbles, frosted white/15 AI bubbles, Listening…/Speaking… status, mic + red hang-up)
