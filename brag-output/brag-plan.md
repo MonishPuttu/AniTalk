@@ -27,3 +27,15 @@
 
 ## Sound
 D minor, 100 bpm; ringtone chimes in key over a quiet pad, drums enter under the conversation, riser + low impact on the logo reveal, soft in-key pops for bubbles/cards, key ticks under typing, closing chime.
+
+## Voice-over version (41s)
+The final `brag.mp4` is the extended cut with narration. Voice: Kokoro TTS (`af_heart`), generated locally. Each scene's timeline was stretched to fit its line (entrances and transitions keep their original speed; only the hold in the middle of each scene slows down), the soundtrack was re-timed to match, and the music ducks under the voice. Some spellings below are written for the voice, e.g. "Ani-Talk", "R-x Check".
+
+| # | Time | Narration |
+|---|------|-----------|
+| 1 | 0.0–3.3s | Your phone rings. It's Madara Uchiha. |
+| 2 | 3.3–12.2s | Pick up, and you're in a real-time voice conversation. He listens, answers in character, and he'll even switch to Japanese mid-call. |
+| 3 | 12.2–19.5s | This is Ani-Talk: a voice-first platform for AI agents, and for your favourite anime characters. |
+| 4 | 19.5–28.0s | Choose Satoru Gojo, Madara, or Zero Two, each with their own personality and voice. Or create a character of your own. |
+| 5 | 28.0–35.0s | Not into anime? Build a custom agent, like a patient math tutor, give it instructions, and start a call. |
+| 6 | 35.0–41.1s | Ani-Talk. Talk to AI like it's a call. Try the live demo today. |
