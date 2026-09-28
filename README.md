@@ -1,5 +1,14 @@
 # AniTalk
 
+<!-- brag:start -->
+<p align="center">
+  <a href="brag-output/brag.mp4"><img src="brag-output/brag.gif" alt="AniTalk launch video" width="100%"></a>
+  <br>
+  <sub>▶ <a href="brag-output/brag.mp4"><b>Watch the full launch video with voice-over</b></a> (41s, sound on)</sub>
+</p>
+<!-- brag:end -->
+
+
 **AniTalk** is a **voice-based agentic platform** that allows users to interact with custom AI agents through natural voice conversations.  
 It also features a unique mode where users can talk to their **favourite anime characters** via immersive voice chat.
 
